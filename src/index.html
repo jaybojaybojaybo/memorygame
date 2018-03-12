@@ -2,67 +2,134 @@
 <html>
   <head>
     <meta charset="utf-8">
+     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Memory Card Game</title>
   </head>
   <body>
     <div class="container">
-      <div id="A" class="w3-row">
-        <div id="AA" class="w3-quarter cell" onclick="myFunction(this.id)">
-          <p>1</p>
-        </div>
-        <div id="AB" class="w3-quarter cell" onclick="myFunction(this.id)">
-          <p>2</p>
-        </div>
-        <div id="AC" class="w3-quarter cell" onclick="myFunction(this.id)">
-          <p>3</p>
-        </div>
-        <div id="AD" class="w3-quarter cell" onclick="myFunction(this.id)">
-          <p>4</p>
-        </div>
-      </div>
-      <div id="B" class="w3-row">
-        <div id="BA" class="w3-quarter cell" onclick="myFunction(this.id)">
-          <p>5</p>
-        </div>
-        <div id="BB" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <header>
+        <h5>Memory Card Game</h5>
+      </header>
 
-        </div>
-        <div id="BC" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="BD" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-      </div>
-      <div id="C" class="w3-row">
-        <div id="CA" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="CB" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="CC" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="CD" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-        </div>
-      </div>
-      <div id="D" class="w3-row">
-        <div id="DA" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="DB" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="DC" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-        </div>
-        <div id="DD" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-        </div>
-      </div>
+      <ul class="deck" id="card-deck">
+           <li class="card" type="diamond">
+               <i class="fa fa-diamond"></i>
+           </li>
+           <li class="card" type="plane">
+               <i class="fa fa-paper-plane-o"></i>
+           </li>
+           <li class="card match" type="anchor">
+               <i class="fa fa-anchor"></i>
+           </li>
+           <li class="card" type="bolt" >
+               <i class="fa fa-bolt"></i>
+           </li>
+           <li class="card match" type="cube">
+               <i class="fa fa-cube"></i>
+           </li>
+           <li class="card match" type="anchor">
+               <i class="fa fa-anchor"></i>
+           </li>
+           <li class="card" type="leaf">
+               <i class="fa fa-leaf"></i>
+           </li>
+           <li class="card" type="bicycle">
+               <i class="fa fa-bicycle"></i>
+           </li>
+           <li class="card" type="diamond">
+               <i class="fa fa-diamond"></i>
+           </li>
+           <li class="card" type="bomb">
+               <i class="fa fa-bomb"></i>
+           </li>
+           <li class="card" type="leaf">
+               <i class="fa fa-leaf"></i>
+           </li>
+           <li class="card" type="bomb">
+               <i class="fa fa-bomb"></i>
+           </li>
+           <li class="card open show" type="bolt">
+               <i class="fa fa-bolt"></i>
+           </li>
+           <li class="card" type="bicycle">
+               <i class="fa fa-bicycle"></i>
+           </li>
+           <li class="card" type="plane">
+               <i class="fa fa-paper-plane-o"></i>
+           </li>
+           <li class="card match" type="cube">
+               <i class="fa fa-cube"></i>
+           </li>
+       </ul>
+       <div class="restart" onclick="startGame()">
+         <i class="fa fa-repeat"></i>
+       </div>
     </div>
+    <script src="./../src/memory.js"></script>
   </body>
 </html>
+
+
+
+
+
+<!--
+<div class="container">
+  <div id="A" class="w3-row">
+    <div id="AA" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <p>1</p>
+    </div>
+    <div id="AB" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <p>2</p>
+    </div>
+    <div id="AC" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <p>3</p>
+    </div>
+    <div id="AD" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <p>4</p>
+    </div>
+  </div>
+  <div id="B" class="w3-row">
+    <div id="BA" class="w3-quarter cell" onclick="myFunction(this.id)">
+      <p>5</p>
+    </div>
+    <div id="BB" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="BC" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="BD" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+  </div>
+  <div id="C" class="w3-row">
+    <div id="CA" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="CB" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="CC" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="CD" class="w3-quarter cell" onclick="myFunction(this.id)">
+
+    </div>
+  </div>
+  <div id="D" class="w3-row">
+    <div id="DA" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="DB" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="DC" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
+
+    </div>
+    <div id="DD" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
+
+    </div>
+  </div>
+</div> -->
