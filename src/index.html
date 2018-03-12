@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="bundle.js"></script>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <title>Memory Card Game</title>
   </head>
   <body>
@@ -62,74 +62,9 @@
                <i class="fa fa-cube"></i>
            </li>
        </ul>
-       <div class="restart" onclick="startGame()">
-         <i class="fa fa-repeat"></i>
+       <div class="restart">
+         <button id="startOver" type="submit" name="button" onclick="window.location.reload()"><i class="fa fa-repeat"></i></button>
        </div>
     </div>
-    <script src="./../src/memory.js"></script>
   </body>
 </html>
-
-
-
-
-
-<!--
-<div class="container">
-  <div id="A" class="w3-row">
-    <div id="AA" class="w3-quarter cell" onclick="myFunction(this.id)">
-      <p>1</p>
-    </div>
-    <div id="AB" class="w3-quarter cell" onclick="myFunction(this.id)">
-      <p>2</p>
-    </div>
-    <div id="AC" class="w3-quarter cell" onclick="myFunction(this.id)">
-      <p>3</p>
-    </div>
-    <div id="AD" class="w3-quarter cell" onclick="myFunction(this.id)">
-      <p>4</p>
-    </div>
-  </div>
-  <div id="B" class="w3-row">
-    <div id="BA" class="w3-quarter cell" onclick="myFunction(this.id)">
-      <p>5</p>
-    </div>
-    <div id="BB" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="BC" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="BD" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-  </div>
-  <div id="C" class="w3-row">
-    <div id="CA" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="CB" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="CC" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="CD" class="w3-quarter cell" onclick="myFunction(this.id)">
-
-    </div>
-  </div>
-  <div id="D" class="w3-row">
-    <div id="DA" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="DB" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="DC" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-    </div>
-    <div id="DD" class="w3-quarter cell bot-side" onclick="myFunction(this.id)">
-
-    </div>
-  </div>
-</div> -->
