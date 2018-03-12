@@ -1,7 +1,8 @@
 var openedCards = [];
+var matchedCards = [];
 let card = document.getElementsByClassName('card');
 let cards = [...card];
-let matchedCard = document.getElementsByClassName("match");
+// let matchedCard = document.getElementsByClassName("match");
 
 
 // fischer-yates shuffle
@@ -27,7 +28,9 @@ export function startGame() {
   var shuffledCards = shuffle(cards);
 
   for(var i = 0; i < cards.length; i++){
-    cards[i].addEventListener("click", displayCard);
+    card = cards[i];
+    card.addEventListener("click", displayCard);
+    card.addEventListener("click", cardOpen);
   }
   for (var j = 0; j < shuffledCards.length; j++){
     deck.innerHTML = "";
@@ -42,25 +45,27 @@ export var displayCard = function (){
   this.classList.toggle("open");
   this.classList.toggle("show");
   this.classList.toggle("disabled");
-  // console.log(openedCards.length);
 };
 
 export function cardOpen() {
-  openedCards.push(card);
-  // var len = openedCards.length;
-  // if(len === 2){
+  openedCards.push();
+  console.log(card);
+  var len = openedCards.length;
+  if(len === 2){
   //   moveCounter();
-    if(openedCards[0].type === openedCards[1].type){
+    if(openedCards[0] === openedCards[1]){
       matched();
     } else {
       unmatched();
     }
   }
-// }
+}
 
 function matched(){
   openedCards[0].classList.add("match");
+  matchedCards.push(openedCards[0]);
   openedCards[1].classList.add("match");
+  matchedCards.push(openedCards[1]);
   openedCards[0].classList.remove("show", "open", "no-event");
   openedCards[1].classList.remove("show", "open", "no-event");
   openedCards = [];
@@ -87,8 +92,8 @@ function disable(){
 function enable(){
   Array.prototype.filter.call(cards, function(card){
     card.classList.remove('disabled');
-    for(var i = 0; i < matchedCard.length; i++){
-      matchedCard[i].classList.add("disabled");
+    for(var i = 0; i < matchedCards.length; i++){
+      matchedCards[i].classList.add("disabled");
     }
   });
 }
